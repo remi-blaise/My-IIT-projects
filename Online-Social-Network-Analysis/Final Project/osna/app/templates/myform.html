@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<b>Enter the headline of a news. You can find headlines on <a href="https://www.politifact.com/truth-o-meter/rulings/pants-fire/" target="_blank">https://www.politifact.com/truth-o-meter/rulings/pants-fire/</a>, for example "Trump inaccurately disparages Yovanovitch in Somalia, Ukraine". Our program will then collect comments on Reddit about his headline and classify them as "believer", "non-believer" or "neutral".</b>
+
+	<p>
+		You can test with <a href="https://www.politifact.com/illinois/statements/2019/oct/29/donald-trump/trump-dead-wrong-about-change-murders-chicago/" target="_blank">this good example:</a> "Over the last two years, the number of murders in America and America’s major cities has dropped, unlike here (Chicago), by more than 10%."
+	</p>
+
+    <form action="/result" method="post" novalidate>
+        <p>
+            {{ form.input_field.label }} {{ form.input_field(size=32) }}
+        </p>
+        {{ form.submit() }}
+    </form>
+{% endblock %}

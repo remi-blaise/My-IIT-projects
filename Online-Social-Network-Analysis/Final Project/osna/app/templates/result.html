@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Your claim: {{ claim }}</p>
+
+
+    <b>Stats</b>
+
+    <div class="a">
+        <img src="{{ url_for('static', filename='NB_comments.png') }}?timestamp={{ timestamp }}" alt="">
+        <p>
+            Number of retrieved comments: {{ nb_comments }} <br>
+            Number of authors on labelized data: {{ len_NB_authors }} (deleted comments don't have author) <br>
+        </p>
+    </div>
+
+    <table>
+    	<thead>
+    		<tr>
+    			<th>Comments</th>
+    			<th>Naive Bayes Prediction</th>
+    			<th>Logistic Regression Prediction</th>
+    			<th>Neural Network Prediction</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		{% for comment, NB_label, LR_label, NN_label in result %}
+    			<tr>
+    				<td>{{ comment }}</td>
+    				<td>{{ NB_label }}</td>
+    				<td>{{ LR_label }}</td>
+                    <td>{{ NN_label }}</td>
+    			</tr>
+    		{% endfor %}
+    	</tbody>
+    </table>
+
+    <hr>
+
+
+{% endblock %}
