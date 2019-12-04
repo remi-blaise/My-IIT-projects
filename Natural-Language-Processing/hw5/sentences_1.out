@@ -1,0 +1,4 @@
+(S (NP she) (VP (VP (V sees) (NP (DT a) (N man))) (PP (P with) (NP (DT a) (N telescope)))))
+(S (NP (DT a) (N man)) (VP (V sees) (NP (DT a) (N telescope))))
+Parsing failed
+(S (NP she) (VP (V sees) (NP she)))

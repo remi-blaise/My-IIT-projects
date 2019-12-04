@@ -1,0 +1,20 @@
+# non-terminal rules
+S -> NP VP
+VP -> VP CVP
+CVP -> CC VP
+VP -> V NP
+NP -> NP CNP
+CNP -> CC NP
+NP -> DT N
+
+# terminal rules
+NP -> they
+VP -> buy
+V -> buy
+VP -> duck
+NP -> chicken
+NP -> duck
+N -> chicken
+N -> duck
+DT -> a
+CC -> and

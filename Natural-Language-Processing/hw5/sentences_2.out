@@ -1,0 +1,4 @@
+(S (NP they) (VP (VP (V buy) (NP (DT a) (N chicken))) (CVP (CC and) (VP duck))))
+(S (NP they) (VP (V buy) (NP (NP (DT a) (N duck)) (CNP (CC and) (NP (DT a) (N chicken))))))
+Parsing failed
+(S (NP chicken) (VP buy))

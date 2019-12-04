@@ -1,0 +1,15 @@
+# non-terminal rules
+S -> NP VP
+VP -> VP PP
+VP -> V NP
+PP -> P NP
+NP -> DT N
+
+# terminal rules
+NP -> she
+VP -> sees
+V -> sees
+P -> with
+N -> man
+N -> telescope
+DT -> a
