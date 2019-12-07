@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Replace this line with one or more shell commands
+# You may write to intermediate text files on disk if necessary
+INPUT=`cat`
+FIRST_WORDS=`echo "$INPUT" | cut -d , -f 3 | cut -d " " -f 1`
+FIFTH_COLUMNS=`echo "$INPUT" | cut -d , -f 5`
+N=`echo "$INPUT" | wc -l`
+
+COUNT=0
+
+for (( i = 1; i <= $N; i++ )); do
+    FIRST_WORD=`echo "$FIRST_WORDS" | head -$i | tail -1`
+    FIFTH_COLUMN=`echo "$FIFTH_COLUMNS" | head -$i | tail -1`
+    if (echo "$FIFTH_COLUMN" | fgrep -q "$FIRST_WORD"); then
+        COUNT=$((COUNT + 1))
+    fi
+done
+
+echo "$COUNT"
