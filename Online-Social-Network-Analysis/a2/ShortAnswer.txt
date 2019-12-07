@@ -1,0 +1,7 @@
+1. Looking at the top errors printed by get_top_misclassified, name two ways you would modify your classifier to improve accuracy (it could be features, tokenization, or something else.)
+
+
+Our classifier does not detect irony or negation. A way to fix would be to use to ngram model. A quick way to take word dependencies into account would be to append features including the context around the word.
+
+
+2. Implement one of the above methods. How did it affect the results?

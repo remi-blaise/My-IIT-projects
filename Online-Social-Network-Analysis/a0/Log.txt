@@ -1,0 +1,15 @@
+Established Twitter connection.
+Read screen names: ['BernieSanders', 'JoeBiden', 'SenWarren', 'realDonaldTrump']
+found 4 users with screen_names ['BernieSanders', 'JoeBiden', 'SenWarren', 'realDonaldTrump']
+Friends per candidate:
+BernieSanders 1390
+JoeBiden 22
+SenWarren 493
+realDonaldTrump 47
+Most common friends:
+[(818910970567344128, 3), (822215673812119553, 3), (15764644, 2), (15808765, 2), (24195214, 2)]
+Friend Overlap:
+[('BernieSanders', 'SenWarren', 14), ('BernieSanders', 'JoeBiden', 3), ('JoeBiden', 'SenWarren', 3), ('JoeBiden', 'realDonaldTrump', 2), ('BernieSanders', 'realDonaldTrump', 1), ('SenWarren', 'realDonaldTrump', 1)]
+User followed by Bernie and Donald: <REDACTED>
+graph has 24 nodes and 42 edges
+network drawn to network.png

@@ -1,0 +1,60 @@
+Enter your responses inline below and push this file to your private GitHub
+repository.
+
+
+1. Assume I plan to use the friend_overlap function above to quantify the
+similarity of two users. E.g., because 14 is larger than 1, I conclude that
+Bernie Sanders and Elizabeth Warrent are more similar than Bernie Sanders and Donald
+Trump.
+
+How is this approach misleading? How might you fix it?
+
+
+
+This approach is misleading because some candidates are following many more people than others.
+For example, BernieSanders is following 1391 people while JoeBiden only follows 22.
+Results are then biased as BernieSanders is very likely to have a bigger overlap score without regard to similarity with other candidates.
+
+To fix this problem, I might normalize the score of each candidate by dividing it by the numbers of friends.
+
+
+
+2. Looking at the output of your followed_by_bernie_and_donald function, why
+do you think this user is followed by both Bernie Sanders and Donald Trump,
+who are rivals? Do some web searches to see if you can find out more
+information.
+
+
+
+Both candidates follow the Vice-President, which is very understandable given they are both candidates to the presidential election
+and have important political functions.
+
+
+
+3. There is a big difference in how many accounts each candidate follows (Bernie Sanders follows over 1.3K accounts, while Donald Trump follows less than
+50). Why do you think this is? How might that affect our analysis?
+
+
+
+Bernie Sanders has to make many alliances in order to strengthen his position what may make him use Twitter's following list as a marketing tool
+as Donald Trump may have to use it more carefully as being president of the USA.
+
+
+
+4. The follower graph we've collected is incomplete. To expand it, we would
+have to also collect the list of accounts followed by each of the
+friends. That is, for each user X that Donald Trump follows, we would have to
+also collect all the users that X follows. Assuming we again use the API call
+https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
+we have to make? Given how Twitter does rate limiting
+(https://dev.twitter.com/rest/public/rate-limiting), approximately how many
+minutes will it take to collect this data?
+
+
+
+We know our four candidates have 1952 friends (without regard to common friends).
+The average number of Twitter followers - which is the very same than the average number of friends - varies a lot depending on sources:
+some estimate 208 followers (https://yourescapefrom9to5.com/average-number-of-twitter-followers-is-208-infographic) while others give a number of 707 (https://kickfactory.com/blog/average-twitter-followers-updated-2016/). Let say it's 450.
+
+In order to get the full list of friends of friends of our candidates, we have to do about 2000 * 450 = 900,000 requests.
+Because we can make 15 requests every 15 minutes, this will take approximately 900,000 minutes = 625 days (almost two years).
